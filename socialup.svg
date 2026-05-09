@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 419.62 190.41">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-family: Lot-Regular, Lot;
+        font-size: 105.14px;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <text class="cls-1" transform="translate(0 89.37)"><tspan x="0" y="0">S</tspan><tspan class="cls-2" x="75.81" y="0">O</tspan><tspan x="157.92" y="0">CIAL</tspan></text>
+    <text class="cls-1" transform="translate(0 177.06)"><tspan x="0" y="0">up.</tspan></text>
+  </g>
+</svg>
