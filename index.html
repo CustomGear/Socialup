@@ -891,13 +891,11 @@
       padding: 5.5rem var(--px) 5.5rem;
     }
 
-    #scroll-vid {
+    #scroll-canvas {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: center center;
       display: block;
     }
 
@@ -1180,8 +1178,7 @@
     <!-- HERO SCENE: sticky video scrub + hero text overlay -->
     <div id="hero-scene">
       <div id="vid-sticky">
-        <video id="scroll-vid" muted playsinline preload="auto" disableRemotePlayback
-          src="Rocket_launch_into_space_animation_202605091450.mp4"></video>
+        <canvas id="scroll-canvas"></canvas>
 
         <div class="vid-grad-top"></div>
         <div class="vid-grad-bottom"></div>
@@ -1753,12 +1750,13 @@
 
 
     /* ════════════════════════════════════════════
-       SCROLL VIDEO SCRUB
+       FRAME SEQUENCE SCRUB
     ════════════════════════════════════════════ */
     (function () {
       const vidSection   = document.getElementById('hero-scene');
       const scrollHintEl = document.getElementById('scroll-hint');
-      const vid          = document.getElementById('scroll-vid');
+      const canvas       = document.getElementById('scroll-canvas');
+      const ctx          = canvas.getContext('2d');
       const progFill     = document.getElementById('vid-progress-fill');
 
       const captions = [
@@ -1767,15 +1765,43 @@
         { el: document.getElementById('vc-3'), start: 0.72, end: 0.92 },
       ];
 
-      let ready       = false;
-      let targetP     = 0;   /* raw scroll progress */
-      let smoothP     = 0;   /* lerped — fed to video */
-      let lastVidTime = -1;
+      const TOTAL = 192;
+      let targetP = 0;
+      let smoothP = 0;
+      let lastIdx = -1;
 
-      vid.pause();
-      vid.currentTime = 0;
-      vid.addEventListener('loadedmetadata', () => { ready = true; });
-      if (vid.readyState >= 1) ready = true;
+      /* Pre-load all frames — browser handles parallel fetching */
+      const frames = Array.from({ length: TOTAL }, (_, i) => {
+        const img = new Image();
+        img.src = `frames/f${String(i).padStart(3, '0')}.jpg`;
+        return img;
+      });
+
+      /* Size canvas buffer to match its CSS display size */
+      function resize() {
+        canvas.width  = canvas.offsetWidth  || window.innerWidth;
+        canvas.height = canvas.offsetHeight || window.innerHeight;
+        if (lastIdx >= 0) renderFrame(lastIdx);
+      }
+      window.addEventListener('resize', resize, { passive: true });
+      resize();
+
+      /* Draw a frame with object-fit: cover behaviour */
+      function renderFrame(idx) {
+        idx = Math.max(0, Math.min(TOTAL - 1, idx));
+        const img = frames[idx];
+        if (!img.complete || !img.naturalWidth) return;
+
+        const cw = canvas.width, ch = canvas.height;
+        const ir = img.naturalWidth / img.naturalHeight;
+        const cr = cw / ch;
+        let dw, dh, dx, dy;
+        if (cr > ir) { dw = cw; dh = cw / ir; dx = 0;            dy = (ch - dh) / 2; }
+        else          { dh = ch; dw = ch * ir; dy = 0;            dx = (cw - dw) / 2; }
+
+        ctx.drawImage(img, dx, dy, dw, dh);
+        lastIdx = idx;
+      }
 
       function getP() {
         const rect   = vidSection.getBoundingClientRect();
@@ -1783,10 +1809,8 @@
         return travel > 0 ? Math.max(0, Math.min(1, -rect.top / travel)) : 0;
       }
 
-      /* Update target on scroll (cheap — just the math) */
       window.addEventListener('scroll', () => { targetP = getP(); }, { passive: true });
 
-      /* Continuous RAF — lerps smoothP → targetP each frame */
       function tick() {
         smoothP += (targetP - smoothP) * 0.15;
         const p = smoothP;
@@ -1799,23 +1823,16 @@
 
         if (elHeroText) {
           elHeroText.style.opacity   = String(1 - clamp((p - 0.05) / 0.25, 0, 1));
-          elHeroText.style.transform = `translateY(${lerp(p,0,0.35,0,-80)}px)`;
+          elHeroText.style.transform = `translateY(${lerp(p, 0, 0.35, 0, -80)}px)`;
         }
         if (scrollHintEl) scrollHintEl.style.opacity = String(1 - clamp(p / 0.12, 0, 1));
 
-        if (ready && vid.duration) {
-          const t = p * vid.duration;
-          if (Math.abs(t - lastVidTime) > 0.033) {
-            /* fastSeek jumps to nearest keyframe — much less stutter */
-            vid.fastSeek ? vid.fastSeek(t) : (vid.currentTime = t);
-            lastVidTime = t;
-          }
-        }
+        const idx = Math.round(p * (TOTAL - 1));
+        if (idx !== lastIdx) renderFrame(idx);
 
         requestAnimationFrame(tick);
       }
 
-      /* Seed both values so there's no catch-up animation on load */
       targetP = smoothP = getP();
       requestAnimationFrame(tick);
     })();
