@@ -1369,7 +1369,7 @@
             <div class="send-fields">
               <input  class="field" id="f-name"    type="text"  placeholder="Your name"                  autocomplete="name" />
               <input  class="field" id="f-email"   type="email" placeholder="Email address"               autocomplete="email" />
-              <input  class="field" id="f-phone"   type="tel"   placeholder="Phone number (optional)"     autocomplete="tel" />
+              <input  class="field" id="f-phone"   type="tel"   placeholder="Phone number"                autocomplete="tel" />
               <input  class="field" id="f-company" type="text"  placeholder="Company name or website (optional)" autocomplete="organization" />
               <textarea class="field" id="f-note"  placeholder="Anything we should know? (optional)" rows="3"></textarea>
             </div>
@@ -1518,7 +1518,7 @@
     const errMsg      = document.getElementById('err-msg');
 
     function getProgress() {
-      return [state.services.size > 0, !!state.timeline, !!state.budget, !!(state.name && state.email)]
+      return [state.services.size > 0, !!state.timeline, !!state.budget, !!(state.name && state.email && state.phone)]
         .filter(Boolean).length * 25;
     }
 
@@ -1526,7 +1526,7 @@
       if (phase === 0) return state.services.size > 0;
       if (phase === 1) return !!state.timeline;
       if (phase === 2) return !!state.budget;
-      if (phase === 3) return !!(state.name && state.email);
+      if (phase === 3) return !!(state.name && state.email && state.phone);
       return false;
     }
 
