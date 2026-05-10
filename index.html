@@ -1158,6 +1158,8 @@
   <form name="social-up-contact" netlify netlify-honeypot="bot-field" hidden>
     <input type="text"  name="name" />
     <input type="email" name="email" />
+    <input type="tel"   name="phone" />
+    <input type="text"  name="company" />
     <input type="text"  name="services" />
     <input type="text"  name="timeline" />
     <input type="text"  name="budget" />
@@ -1365,9 +1367,11 @@
           </div>
           <div class="send-layout">
             <div class="send-fields">
-              <input  class="field" id="f-name"  type="text"  placeholder="Your name" autocomplete="name" />
-              <input  class="field" id="f-email" type="email" placeholder="Email address" autocomplete="email" />
-              <textarea class="field" id="f-note" placeholder="Anything we should know? (optional)" rows="3"></textarea>
+              <input  class="field" id="f-name"    type="text"  placeholder="Your name"                  autocomplete="name" />
+              <input  class="field" id="f-email"   type="email" placeholder="Email address"               autocomplete="email" />
+              <input  class="field" id="f-phone"   type="tel"   placeholder="Phone number (optional)"     autocomplete="tel" />
+              <input  class="field" id="f-company" type="text"  placeholder="Company name or website (optional)" autocomplete="organization" />
+              <textarea class="field" id="f-note"  placeholder="Anything we should know? (optional)" rows="3"></textarea>
             </div>
             <div class="send-summary">
               <p class="ss-heading">Your signal</p>
@@ -1500,7 +1504,7 @@
     /* ════════════════════════════════════════════
        STATE
     ════════════════════════════════════════════ */
-    const state   = { services: new Set(), timeline: '', budget: '', name: '', email: '', note: '' };
+    const state   = { services: new Set(), timeline: '', budget: '', name: '', email: '', phone: '', company: '', note: '' };
     let phase     = 0;
     let loading   = false;
 
@@ -1657,9 +1661,11 @@
     });
 
     /* Contact fields */
-    document.getElementById('f-name').addEventListener('input',  e => { state.name  = e.target.value.trim(); updateUI(); });
-    document.getElementById('f-email').addEventListener('input', e => { state.email = e.target.value.trim(); updateUI(); });
-    document.getElementById('f-note').addEventListener('input',  e => { state.note  = e.target.value.trim(); });
+    document.getElementById('f-name').addEventListener('input',    e => { state.name    = e.target.value.trim(); updateUI(); });
+    document.getElementById('f-email').addEventListener('input',   e => { state.email   = e.target.value.trim(); updateUI(); });
+    document.getElementById('f-phone').addEventListener('input',   e => { state.phone   = e.target.value.trim(); });
+    document.getElementById('f-company').addEventListener('input', e => { state.company = e.target.value.trim(); });
+    document.getElementById('f-note').addEventListener('input',    e => { state.note    = e.target.value.trim(); });
 
     /* Next / Submit */
     btnNext.addEventListener('click', async () => {
@@ -1674,6 +1680,8 @@
           'form-name': 'social-up-contact',
           name:     state.name,
           email:    state.email,
+          phone:    state.phone,
+          company:  state.company,
           services: [...state.services].join(', '),
           timeline: state.timeline,
           budget:   state.budget,
