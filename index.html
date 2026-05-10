@@ -728,6 +728,12 @@
 
     .choice-card.on .cc-num { color: rgba(0,0,0,0.15); }
 
+    .cc-num svg { display: block; width: auto; height: 1em; }
+    .cc-num svg .bar-lit { fill: var(--lime); transition: fill 0.25s; }
+    .cc-num svg .bar-dim { fill: rgba(255,255,255,0.1); transition: fill 0.25s; }
+    .choice-card.on .cc-num svg .bar-lit { fill: rgba(0,0,0,0.25); }
+    .choice-card.on .cc-num svg .bar-dim { fill: rgba(0,0,0,0.1); }
+
     .cc-lbl  { font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.18em; color: #fff; transition: color 0.25s; }
     .cc-desc { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.32); margin-top: 0.3rem; line-height: 1.5; transition: color 0.25s; }
     .choice-card.on .cc-lbl  { color: #000; }
@@ -1426,10 +1432,10 @@
     ];
 
     const BUDGETS = [
-      { label: "Starter",     num: "—",   desc: "Single service, focused scope" },
-      { label: "Growth",      num: "——",  desc: "Multiple services, momentum" },
-      { label: "Full System", num: "———", desc: "Complete transformation" },
-      { label: "Let's talk",  num: "?",   desc: "Open to a conversation" },
+      { label: "Starter",     desc: "Single service, focused scope", num: `<svg viewBox="0 0 46 28" fill="none"><rect class="bar-lit" x="0"  y="16" width="11" height="12" rx="2.5"/><rect class="bar-dim" x="17" y="9"  width="11" height="19" rx="2.5"/><rect class="bar-dim" x="34" y="0"  width="11" height="28" rx="2.5"/></svg>` },
+      { label: "Growth",      desc: "Multiple services, momentum",  num: `<svg viewBox="0 0 46 28" fill="none"><rect class="bar-lit" x="0"  y="16" width="11" height="12" rx="2.5"/><rect class="bar-lit" x="17" y="9"  width="11" height="19" rx="2.5"/><rect class="bar-dim" x="34" y="0"  width="11" height="28" rx="2.5"/></svg>` },
+      { label: "Full System", desc: "Complete transformation",      num: `<svg viewBox="0 0 46 28" fill="none"><rect class="bar-lit" x="0"  y="16" width="11" height="12" rx="2.5"/><rect class="bar-lit" x="17" y="9"  width="11" height="19" rx="2.5"/><rect class="bar-lit" x="34" y="0"  width="11" height="28" rx="2.5"/></svg>` },
+      { label: "Let's talk",  desc: "Open to a conversation",       num: "?" },
     ];
 
     const PHASE_LABELS = [
