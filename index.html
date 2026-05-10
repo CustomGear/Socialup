@@ -275,6 +275,18 @@
       border-top: 1px solid rgba(255,255,255,0.1);
       padding: 5rem var(--px) 6rem;
       overflow: hidden;
+      background-image: url('moon-bg.jpg');
+      background-size: cover;
+      background-position: center 30%;
+    }
+    #approach::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom,
+        rgba(0,0,0,0.82) 0%,
+        rgba(0,0,0,0.55) 40%,
+        rgba(0,0,0,0.72) 100%);
+      z-index: 0;
     }
 
     @media (min-width: 768px) { #approach { padding-top: 7rem; padding-bottom: 8rem; } }
@@ -295,7 +307,7 @@
       width: 130vw; height: 28rem; border-radius: 50%;
       border-top: 1px solid rgba(255,255,255,0.15);
       background: radial-gradient(ellipse at top, rgba(255,255,255,0.14), rgba(255,255,255,0.04) 34%, transparent 70%);
-      pointer-events: none; will-change: transform;
+      pointer-events: none; will-change: transform; z-index: 1;
     }
 
     .approach-inner { max-width: 72rem; margin: 0 auto; position: relative; z-index: 1; }
