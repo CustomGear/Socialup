@@ -627,8 +627,9 @@
     .svc-card.flash::after { opacity: 0.18; }
 
     .svc-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 0.5rem; }
-    .svc-icon { font-size: 1.5rem; line-height: 1; }
-    @media (min-width: 640px) { .svc-icon { font-size: 1.75rem; } }
+    .svc-icon { width: 1.375rem; height: 1.375rem; color: var(--lime); flex-shrink: 0; display: flex; }
+    .svc-icon svg { width: 100%; height: 100%; display: block; }
+    @media (min-width: 640px) { .svc-icon { width: 1.625rem; height: 1.625rem; } }
 
     .svc-check {
       width: 1.375rem; height: 1.375rem; border-radius: 50%;
@@ -1039,7 +1040,7 @@
       }
 
       .svc-top { display: contents; }
-      .svc-icon { order: 1; font-size: 1.1rem; flex-shrink: 0; margin-right: 0.75rem; }
+      .svc-icon { order: 1; width: 1.1rem; height: 1.1rem; flex-shrink: 0; margin-right: 0.75rem; }
       .svc-card > div:last-child { order: 2; flex: 1; }
       .svc-check { order: 3; margin-left: 0.5rem; flex-shrink: 0; }
       .svc-desc { display: none; }
@@ -1401,20 +1402,20 @@
        DATA
     ════════════════════════════════════════════ */
     const SERVICES = [
-      { label: "Content Creation",        icon: "✦",  desc: "Photo / reels / copy" },
-      { label: "Branding & Visuals",       icon: "◐",  desc: "Identity, logo, colour" },
-      { label: "Website & Landing Pages",  icon: "◻",  desc: "Design + build" },
-      { label: "Lead Generation",          icon: "⌁",  desc: "Leads on autopilot" },
-      { label: "AI & Automation",          icon: "⬢",  desc: "Smart workflows" },
-      { label: "CRM & Sales Systems",      icon: "✺",  desc: "Pipeline & follow-up" },
-      { label: "Booking & Scheduling",     icon: "○",  desc: "Automated flows" },
-      { label: "Reviews & Reputation",     icon: "◆",  desc: "Build trust at scale" },
-      { label: "Product Catalogues",       icon: "▱",  desc: "Digital menus" },
-      { label: "Email Marketing",          icon: "◒",  desc: "Sequences that sell" },
-      { label: "Photography & Video",      icon: "◎",  desc: "Stop the scroll" },
-      { label: "SEO & Online Growth",      icon: "↗",  desc: "Found first" },
-      { label: "Custom Solutions",         icon: "◈",  desc: "Something specific?" },
-      { label: "Full Growth Package",      icon: "∞",  desc: "Everything connected" },
+      { label: "Content Creation",        desc: "Photo / reels / copy",    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><circle cx="9" cy="9" r="1.5" fill="currentColor" stroke="none"/><path d="M21 14l-5-5-4 4-2-2-4 4"/></svg>` },
+      { label: "Branding & Visuals",      desc: "Identity, logo, colour",  icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 3"/><path d="M12 12l-5.2 3"/></svg>` },
+      { label: "Website & Landing Pages", desc: "Design + build",          icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/><path d="M7 4v5"/><circle cx="5" cy="6.5" r="0.75" fill="currentColor" stroke="none"/><circle cx="8.5" cy="6.5" r="0.75" fill="currentColor" stroke="none"/></svg>` },
+      { label: "Lead Generation",         desc: "Leads on autopilot",      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12A10 10 0 1 1 12 2"/><path d="M22 2 12 12"/><path d="M17 2h5v5"/></svg>` },
+      { label: "AI & Automation",         desc: "Smart workflows",         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V12h2l2 3h-2v2a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2v-2H6l2-3h2V9.5A4 4 0 0 1 12 2z"/><circle cx="9" cy="17.5" r="0.5" fill="currentColor" stroke="none"/><circle cx="15" cy="17.5" r="0.5" fill="currentColor" stroke="none"/></svg>` },
+      { label: "CRM & Sales Systems",     desc: "Pipeline & follow-up",    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/><rect x="6" y="4" width="4" height="4" rx="1"/><rect x="14" y="10" width="4" height="4" rx="1"/><rect x="8" y="16" width="4" height="4" rx="1"/></svg>` },
+      { label: "Booking & Scheduling",    desc: "Automated flows",         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>` },
+      { label: "Reviews & Reputation",    desc: "Build trust at scale",    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>` },
+      { label: "Product Catalogues",      desc: "Digital menus",           icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v13"/><path d="M4 19a2 2 0 0 0 2 2h13a1 1 0 0 0 1-1v-1"/><path d="M8 10h8M8 14h5"/></svg>` },
+      { label: "Email Marketing",         desc: "Sequences that sell",     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="15" rx="2"/><path d="M2 8l10 7 10-7"/></svg>` },
+      { label: "Photography & Video",     desc: "Stop the scroll",         icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>` },
+      { label: "SEO & Online Growth",     desc: "Found first",             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>` },
+      { label: "Paid Advertising",        desc: "Targeted spend, real ROI",icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>` },
+      { label: "Other",                   desc: "Something specific?",     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r="0.5" fill="currentColor" stroke="none"/></svg>` },
     ];
 
     const TIMELINES = [
