@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  width: 1200px;
+  height: 630px;
+  overflow: hidden;
+  background: #0a0908;
+  color: #f5f1ea;
+  position: relative;
+}
+
+.grid-bg {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(245,241,234,0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245,241,234,0.022) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.top-bar {
+  position: absolute; top: 0; left: 0; right: 0; height: 5px;
+  background: linear-gradient(90deg, #c8ff00, #b8f000);
+}
+
+.corner {
+  position: absolute; top: 0; right: 0;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle at top right, rgba(200,255,0,0.12), transparent 70%);
+  pointer-events: none;
+}
+
+.inner {
+  position: absolute; inset: 0;
+  display: flex;
+  padding: 56px 64px 72px;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ── LEFT ── */
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.agency-tag {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.su-logo {
+  height: 26px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.tag-div { width: 1px; height: 16px; background: #8a8278; }
+
+.tag-for {
+  font-family: 'Barlow', sans-serif;
+  font-size: 12px; color: #8a8278;
+  letter-spacing: 0.12em; text-transform: uppercase;
+}
+
+h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 94px;
+  line-height: 0.87;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #f5f1ea;
+  margin-bottom: 24px;
+}
+
+h1 em { font-style: normal; color: #c8ff00; }
+
+.sub {
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #8a8278;
+  line-height: 1.55;
+  max-width: 36ch;
+}
+
+/* ── RIGHT ── */
+.right {
+  width: 460px;
+  flex-shrink: 0;
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.cover-mock { position: relative; width: 100%; }
+
+.browser {
+  width: 100%;
+  border: 1px solid rgba(245,241,234,0.14);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #1c1a17;
+  box-shadow: 0 32px 72px rgba(0,0,0,0.65);
+}
+
+.browser-bar {
+  height: 36px;
+  display: flex; align-items: center; gap: 7px;
+  padding: 0 16px;
+  background: #26231f;
+  border-bottom: 1px solid rgba(245,241,234,0.08);
+}
+
+.dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+.url-bar {
+  margin-left: 12px; flex: 1; height: 20px; border-radius: 5px;
+  background: rgba(245,241,234,0.07);
+  font-family: 'Barlow', sans-serif; font-size: 11px; color: #8a8278;
+  display: flex; align-items: center; padding: 0 10px;
+}
+
+.browser .screen {
+  display: block; width: 100%; height: 255px;
+  object-fit: cover; object-position: top;
+}
+
+.phone {
+  position: absolute; right: -24px; bottom: -52px;
+  width: 138px; height: 290px; border-radius: 22px;
+  background: #0d0c0b; border: 6px solid #2a2724;
+  box-shadow: 0 28px 64px rgba(0,0,0,0.72);
+  overflow: hidden;
+}
+
+.phone::before {
+  content: ''; position: absolute; z-index: 4;
+  top: 9px; left: 50%; transform: translateX(-50%);
+  width: 38px; height: 4px; border-radius: 2px;
+  background: rgba(245,241,234,0.25);
+}
+
+.phone .screen {
+  display: block; width: 100%; height: 100%;
+  object-fit: cover; object-position: top;
+}
+
+/* ── BOTTOM BAR ── */
+.bottom-bar {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 50px;
+  border-top: 1px solid rgba(245,241,234,0.08);
+  display: flex; align-items: center;
+  padding: 0 64px; justify-content: space-between;
+}
+
+.bottom-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase; color: #8a8278;
+}
+
+.bottom-label span { color: #c8ff00; }
+</style>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="top-bar"></div>
+<div class="corner"></div>
+
+<div class="inner">
+  <div class="left">
+    <div class="agency-tag">
+      <img class="su-logo" src="socialup.svg" alt="SocialUp">
+      <span class="tag-div"></span>
+      <span class="tag-for">Prepared for Tucker's Marketplace</span>
+    </div>
+    <h1>Marketing<br><em>Retainer</em><br>Proposal</h1>
+    <p class="sub">A complete site build &amp; 3-month growth retainer — built to convert tourist traffic into customers.</p>
+  </div>
+
+  <div class="right">
+    <div class="cover-mock">
+      <div class="browser">
+        <div class="browser-bar">
+          <span class="dot" style="background:#ff5f57;"></span>
+          <span class="dot" style="background:#febc2e;"></span>
+          <span class="dot" style="background:#28c840;"></span>
+          <span class="url-bar">eattuckers.ca</span>
+        </div>
+        <img class="screen" src="preview-desktop.png" alt="Tucker's Marketplace desktop">
+      </div>
+      <div class="phone">
+        <img class="screen" src="preview-mobile.png" alt="Tucker's Marketplace mobile">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bottom-bar">
+  <span class="bottom-label"><span>SocialUp</span> · socialup.ca</span>
+  <span class="bottom-label"><span>Tucker's Marketplace</span> · Marketing Retainer · June 2026</span>
+</div>
+
+</body>
+</html>
