@@ -110,6 +110,12 @@ document.addEventListener('DOMContentLoaded', async function() {
     setStatus('Rendering...');
     for (const uuid of uuids) template = template.split(uuid).join(blobUrls[uuid]);
 
+    // Inject mobile viewport and responsive overrides
+    if (!template.includes('name="viewport"')) {
+      template = template.replace(/(<head[^>]*>)/i, '$1<meta name="viewport" content="width=device-width, initial-scale=1">');
+    }
+    template = template.replace(/(<\/head>)/i, '<style>@media(max-width:768px){body{overflow-x:hidden!important}img,video,iframe,table{max-width:100%!important}[style*="width:"]{max-width:100%!important;width:100%!important;box-sizing:border-box!important}[style*="font-size:"]{font-size:clamp(12px,4vw,inherit)!important}}</style>$1');
+
     // Strip integrity + crossorigin — blob URLs from a file:// document inherit
     // a null origin, so crossorigin forces a CORS fetch that SRI then rejects.
     // The manifest bytes are ours; SRI protects against CDN compromise, not this.
