@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A2 Roofing — Recommended Growth Plan | SocialUp</title>
+<meta name="description" content="Recommended growth plan, website rebuild scope and pricing for A2 Roofing, prepared by SocialUp.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="a2-logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-deep:#0b262f;
+  --navy:#123a46;
+  --navy-card:#17404d;
+  --navy-card-2:#1c4a58;
+  --line:rgba(230,230,230,0.12);
+  --grey:#e6e6e6;
+  --grey-dim:#a9bcc0;
+  --lime:#c4ff47;
+  --lime-dim:#c4ff4722;
+  --red-soft:#ff6b5e;
+  --amber:#ffc857;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+section[id]{scroll-margin-top:84px;}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:var(--navy-deep);
+  color:var(--grey);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:600;color:#fff;letter-spacing:-0.01em;}
+a{color:var(--lime);}
+.brand-link{text-decoration:none;color:inherit;display:inline-flex;align-items:center;transition:opacity .15s ease;}
+.brand-link:hover{opacity:0.75;}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+.small-wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+
+/* NAV */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(11,38,47,0.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.topbar-inner{max-width:960px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.topbar-logo-a2{height:36px;}
+.prepared-by{display:flex;align-items:center;gap:12px;}
+.topbar-logo-su{height:26px;opacity:0.95;}
+.topbar .tag{font-size:11px;color:var(--grey-dim);text-transform:uppercase;letter-spacing:0.12em;}
+@media (max-width:560px){.topbar-logo-a2{height:26px;}.topbar-logo-su{height:19px;}.topbar .tag{display:none;}}
+
+/* HERO */
+.hero{padding:72px 0 48px;border-bottom:1px solid var(--line);position:relative;overflow:hidden;}
+.hero::before{content:"";position:absolute;top:-120px;right:-120px;width:420px;height:420px;background:radial-gradient(circle,var(--lime-dim),transparent 70%);pointer-events:none;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--lime);background:var(--lime-dim);border:1px solid rgba(196,255,71,0.35);padding:6px 12px;border-radius:100px;margin-bottom:22px;}
+.hero h1{font-size:clamp(30px,4.4vw,46px);line-height:1.12;max-width:720px;}
+.hero .sub{color:var(--grey-dim);font-size:17px;max-width:640px;margin-top:16px;}
+.hero .meta{display:flex;flex-wrap:wrap;gap:24px;margin-top:32px;font-size:13px;color:var(--grey-dim);}
+.hero .meta b{color:#fff;font-weight:600;}
+
+/* QUICK NAV */
+.quicknav{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;}
+.quicknav a{font-size:12.5px;font-weight:600;color:var(--grey-dim);background:var(--navy-card);border:1px solid var(--line);padding:7px 14px;border-radius:100px;text-decoration:none;transition:all .15s ease;}
+.quicknav a:hover{color:var(--lime);border-color:rgba(196,255,71,0.4);transform:translateY(-1px);}
+
+/* PRICE STRIP */
+.price-strip-section{padding:40px 0;border-bottom:1px solid var(--line);}
+.price-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;}
+.price-card{background:linear-gradient(155deg,var(--navy-card),var(--navy));border:1px solid var(--line);border-radius:14px;padding:22px 20px;}
+.price-card .amount{font-family:'Fraunces',serif;font-weight:600;font-size:30px;color:var(--lime);line-height:1.1;}
+.price-card .amount small{font-size:13px;color:var(--grey-dim);font-family:'Inter',sans-serif;font-weight:600;}
+.price-card .label{font-size:13px;color:#fff;font-weight:600;margin-top:8px;}
+.price-card .note{font-size:12.5px;color:var(--grey-dim);margin-top:6px;line-height:1.5;}
+
+/* SECTIONS */
+section.block{padding:52px 0;border-bottom:1px solid var(--line);}
+section.block:last-of-type{border-bottom:none;}
+.block-head{display:flex;align-items:baseline;gap:14px;margin-bottom:8px;}
+.block-eyebrow{font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--lime);margin-bottom:10px;}
+.block h2{font-size:26px;margin-bottom:18px;}
+h3.sub-h{font-size:17px;color:#fff;margin:26px 0 10px;font-family:'Inter',sans-serif;font-weight:700;}
+p{margin-bottom:14px;color:var(--grey);}
+p.lead{color:#fff;font-size:16px;}
+ul,ol{margin:0 0 16px 20px;color:var(--grey);}
+li{margin-bottom:7px;}
+.callout{background:var(--navy-card);border:1px solid var(--line);border-left:3px solid var(--lime);border-radius:8px;padding:18px 20px;margin:18px 0;}
+.callout p{margin-bottom:0;color:var(--grey);}
+
+/* TWO COL LIST */
+.list2{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;}
+.list2 ul{margin-bottom:0;}
+@media (max-width:640px){.list2{grid-template-columns:1fr;}}
+
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px;}
+.chip{background:var(--navy-card);border:1px solid var(--line);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--grey-dim);}
+
+/* ACCESS GRID */
+.access-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:8px;}
+.access-card{background:var(--navy-card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;}
+.access-card h4{font-size:14.5px;color:var(--lime);font-family:'Inter',sans-serif;font-weight:700;margin-bottom:12px;letter-spacing:0.01em;}
+.access-card ul{margin:0;padding-left:18px;}
+.access-card li{font-size:13.5px;color:var(--grey);margin-bottom:6px;}
+.access-card p{font-size:13px;margin-top:10px;margin-bottom:0;color:var(--grey-dim);}
+
+/* STEPS */
+.steps-list{list-style:none;margin:0;padding:0;counter-reset:step;}
+.steps-list li{display:flex;gap:18px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--line);margin-bottom:0;counter-increment:step;color:var(--grey);}
+.steps-list li:first-child{border-top:none;}
+.steps-list li::before{content:counter(step);flex:none;width:28px;height:28px;border-radius:8px;border:1px solid rgba(196,255,71,0.4);color:var(--lime);font-family:'Fraunces',serif;font-size:13px;display:flex;align-items:center;justify-content:center;}
+
+/* TABLE */
+.tbl{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;}
+.tbl th,.tbl td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);}
+.tbl th{color:var(--grey-dim);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.06em;}
+
+/* CTA */
+.cta{padding:64px 0 80px;text-align:center;position:relative;}
+.cta h2{font-size:clamp(26px,4vw,36px);max-width:640px;margin:0 auto 16px;}
+.cta p{max-width:520px;margin:0 auto 28px;color:var(--grey-dim);}
+.cta-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:100px;font-weight:700;font-size:14px;text-decoration:none;transition:transform .15s ease;}
+.btn:hover{transform:translateY(-2px);}
+.btn-primary{background:var(--lime);color:#0b262f;}
+.btn-secondary{background:transparent;color:#fff;border:1px solid var(--line);}
+
+footer{border-top:1px solid var(--line);padding:36px 0;text-align:center;font-size:12px;color:var(--grey-dim);}
+footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
+
+@media print{
+  .topbar{position:static;}
+  body{background:#fff;color:#111;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a href="../" class="brand-link"><img src="a2-logo.svg" alt="A2 Roofing" class="topbar-logo-a2"></a>
+    <div class="prepared-by">
+      <span class="tag">Prepared by</span>
+      <a href="https://socialup.ca" target="_blank" rel="noopener" class="brand-link">
+        <img src="socialup-logo.png" alt="SocialUp" class="topbar-logo-su">
+      </a>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Recommended Growth Plan</span>
+    <h1>Keep the brand. Rebuild the engine behind it.</h1>
+    <p class="sub">A2 Roofing already has a strong visual identity and professional branding. The recommendation is not to discard that work — it's to preserve the existing brand while rebuilding and expanding the website into a complete lead-generation platform.</p>
+    <div class="meta">
+      <span>Prepared for <b>A2 Roofing</b></span>
+      <span>Prepared by <a href="https://socialup.ca" target="_blank" rel="noopener" class="brand-link"><b>SocialUp</b></a></span>
+      <span>Follow-up to the <a href="../">website &amp; SEO audit</a></span>
+    </div>
+    <nav class="quicknav">
+      <a href="#plan">The plan</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#access">What we need</a>
+      <a href="#next-steps">Next steps</a>
+      <a href="#talk">Let's talk</a>
+    </nav>
+  </div>
+</header>
+
+<section class="price-strip-section">
+  <div class="wrap">
+    <div class="price-strip">
+      <div class="price-card">
+        <div class="amount">$5,000</div>
+        <div class="label">Website rebuild <small>· one-time</small></div>
+        <div class="note">Full rebuild, multilingual, estimate form, tracking &amp; Google Business setup</div>
+      </div>
+      <div class="price-card">
+        <div class="amount">$2,000<small>/mo</small></div>
+        <div class="label">Ongoing marketing</div>
+        <div class="note">Local SEO, Google Ads management, content, reporting</div>
+      </div>
+      <div class="price-card">
+        <div class="amount">$1,500–2,500<small>/mo</small></div>
+        <div class="label">Google Ads budget</div>
+        <div class="note">Paid directly to Google, separate from management fee</div>
+      </div>
+      <div class="price-card">
+        <div class="amount">$500<small>/yr</small></div>
+        <div class="label">Hosting &amp; maintenance</div>
+        <div class="note">Hosting, security, backups, technical upkeep</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="plan">
+  <div class="wrap">
+    <div class="block-eyebrow">The system</div>
+    <h2>What the new system supports</h2>
+    <div class="chips">
+      <span class="chip">Google Search visibility</span>
+      <span class="chip">Google Maps visibility</span>
+      <span class="chip">Google Ads</span>
+      <span class="chip">AI-powered search results</span>
+      <span class="chip">Lead tracking &amp; reporting</span>
+      <span class="chip">English &amp; French audiences</span>
+      <span class="chip">Better visitor-to-estimate conversion</span>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-eyebrow">Phase One</div>
+    <h2>Website Rebuild &amp; Marketing Foundation</h2>
+    <p>The current website would be rebuilt and expanded using the existing A2 Roofing branding, colours, photography and overall visual direction. The new website would include multiple pages designed around the specific services and geographic areas A2 Roofing wants to target.</p>
+    <p>This would include:</p>
+    <div class="list2">
+      <ul>
+        <li>Professionally rebuilt website</li>
+        <li>Dedicated pages for each priority roofing service</li>
+        <li>Dedicated pages for priority cities and service areas</li>
+        <li>English and French website content</li>
+        <li>Project galleries and completed project pages</li>
+        <li>Before-and-after roofing examples</li>
+        <li>Customer reviews and testimonials</li>
+      </ul>
+      <ul>
+        <li>Warranty, insurance and company trust information</li>
+        <li>Mobile-focused calls to action</li>
+        <li>Dedicated Google Ads landing pages</li>
+        <li>Search-engine-friendly website structure</li>
+        <li>Technical SEO and structured data</li>
+        <li>Google Analytics and Search Console setup</li>
+        <li>Call and form conversion tracking</li>
+        <li>Google Business Profile creation and optimization</li>
+        <li>Website launch, redirects and indexing support</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-eyebrow">Included in Phase One</div>
+    <h2>Interactive estimate form</h2>
+    <p>The website would include an interactive, step-by-step estimate form designed to make the inquiry process easier and more engaging. Instead of asking customers to complete a long traditional form, the form would guide them through a short series of questions, such as:</p>
+    <div class="chips">
+      <span class="chip">Type of roofing service required</span>
+      <span class="chip">Property type</span>
+      <span class="chip">Approximate roof size</span>
+      <span class="chip">Current roofing material</span>
+      <span class="chip">Project urgency</span>
+      <span class="chip">Property location</span>
+      <span class="chip">Preferred method of contact</span>
+      <span class="chip">Photos of the existing roof</span>
+    </div>
+    <p>The form can change based on the customer's selections, helping A2 Roofing collect better information before contacting the lead. The objective is to improve the customer experience, increase form completion rates and provide the sales team with more qualified project information.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-eyebrow">Included in Phase One</div>
+    <h2>Lead tracking</h2>
+    <p>Every major lead source would be tracked so A2 Roofing can understand which marketing activities are producing real opportunities. Tracking would include:</p>
+    <div class="list2">
+      <ul>
+        <li>Phone calls</li>
+        <li>Estimate requests</li>
+        <li>Website form submissions</li>
+        <li>Google Ads leads</li>
+      </ul>
+      <ul>
+        <li>Google Business Profile activity</li>
+        <li>Organic Google traffic</li>
+        <li>Social media traffic</li>
+        <li>Landing-page conversions</li>
+        <li>Cost per advertising lead</li>
+      </ul>
+    </div>
+    <div class="callout"><p>The focus would not simply be on increasing website traffic. The focus would be on generating and tracking qualified roofing opportunities.</p></div>
+  </div>
+</section>
+
+<section class="block" id="pricing">
+  <div class="wrap">
+    <div class="block-eyebrow">Investment</div>
+    <h2>Website &amp; initial marketing investment</h2>
+    <p>The initial investment would include the website rebuild, content structure, multilingual setup, interactive estimate form, lead tracking, Google Business Profile setup, analytics and advertising foundation.</p>
+    <div class="price-strip" style="margin-top:20px;">
+      <div class="price-card">
+        <div class="amount">$5,000</div>
+        <div class="label">One-time investment</div>
+        <div class="note">A payment schedule can be established before the project begins.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-eyebrow">Phase Two</div>
+    <h2>Ongoing marketing &amp; growth</h2>
+    <p>Once the new website and tracking systems are launched, ongoing work would focus on increasing A2 Roofing's visibility, improving campaign performance and generating a consistent flow of qualified leads. Monthly services would include:</p>
+    <div class="list2">
+      <ul>
+        <li>Local SEO management</li>
+        <li>Google Business Profile management</li>
+        <li>Google Ads management</li>
+        <li>Keyword and competitor monitoring</li>
+        <li>Search-term and negative-keyword management</li>
+        <li>New service and location content</li>
+      </ul>
+      <ul>
+        <li>English and French content updates</li>
+        <li>New roofing project pages</li>
+        <li>Website and landing-page improvements</li>
+        <li>Review-generation strategy</li>
+        <li>Technical SEO monitoring</li>
+        <li>Lead and conversion analysis</li>
+        <li>Monthly reporting and strategy</li>
+      </ul>
+    </div>
+    <div class="price-strip" style="margin-top:20px;">
+      <div class="price-card">
+        <div class="amount">$2,000<small>/mo</small></div>
+        <div class="label">Monthly marketing investment</div>
+        <div class="note">Begins once the new website and advertising foundation are ready to launch.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-eyebrow">Advertising</div>
+    <h2>Google Ads budget</h2>
+    <p>The advertising budget is separate from the monthly management fee and would be paid directly to Google. A recommended starting advertising budget would be:</p>
+    <div class="price-strip" style="margin-top:20px;">
+      <div class="price-card">
+        <div class="amount">$1,500–$2,500<small>/mo</small></div>
+        <div class="label">Recommended starting budget</div>
+        <div class="note">Paid directly to Google — not part of the SocialUp management fee.</div>
+      </div>
+    </div>
+    <p style="margin-top:20px;">The campaigns would initially focus on the most profitable roofing services and strongest geographic areas. The advertising budget can be adjusted once enough lead data has been collected to determine which services, keywords and locations are producing the best opportunities.</p>
+  </div>
+</section>
+
+<section class="block" id="timeline">
+  <div class="wrap">
+    <div class="block-eyebrow">What to expect</div>
+    <h2>Expected timeline</h2>
+    <p class="lead">A2 Roofing should expect approximately three months before meaningful progress becomes visible.</p>
+    <p>Google Ads can begin generating website traffic and inquiries shortly after launch. However, the first several weeks are also used to collect data, identify the strongest searches and eliminate keywords that produce poor-quality traffic. Organic Google rankings, Google Maps visibility and AI search visibility require more time. The first three months should be viewed as the foundation and data-collection stage.</p>
+    <h3 class="sub-h">More competitive searches may take longer, depending on</h3>
+    <div class="chips">
+      <span class="chip">The targeted city or region</span>
+      <span class="chip">The competitiveness of the roofing service</span>
+      <span class="chip">The number and quality of Google reviews</span>
+      <span class="chip">The amount of project content available</span>
+      <span class="chip">The authority of competing roofing companies</span>
+      <span class="chip">The consistency of ongoing marketing work</span>
+    </div>
+    <h3 class="sub-h">Progress would be measured through</h3>
+    <div class="chips">
+      <span class="chip">Qualified phone calls</span>
+      <span class="chip">Estimate requests</span>
+      <span class="chip">Form submissions</span>
+      <span class="chip">Advertising cost per lead</span>
+      <span class="chip">Website conversion rate</span>
+      <span class="chip">Google Business Profile activity</span>
+      <span class="chip">Organic search visibility</span>
+      <span class="chip">Keyword movement</span>
+      <span class="chip">Lead quality</span>
+    </div>
+    <div class="callout"><p>Specific rankings or lead volumes cannot be guaranteed. The strategy would focus on building a measurable and sustainable marketing system that improves over time.</p></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-eyebrow">Ongoing</div>
+    <h2>Hosting &amp; technical maintenance</h2>
+    <p>Website hosting, security monitoring, backups, technical updates and general system maintenance would be provided for:</p>
+    <div class="price-strip" style="margin-top:20px;max-width:280px;">
+      <div class="price-card">
+        <div class="amount">$500<small>/yr</small></div>
+        <div class="label">Hosting &amp; technical maintenance</div>
+      </div>
+    </div>
+    <p style="margin-top:20px;">This covers the technical operation of the website. Major new functionality, large design changes or extensive new sections would be quoted separately if required.</p>
+  </div>
+</section>
+
+<section class="block" id="access">
+  <div class="wrap">
+    <div class="block-eyebrow">Before we begin</div>
+    <h2>Access required to begin</h2>
+    <p>To begin the website, Google Business Profile and marketing setup, access to the following accounts and information would be required.</p>
+    <div class="access-grid">
+      <div class="access-card">
+        <h4>Website &amp; domain access</h4>
+        <ul>
+          <li>Current website administrator access</li>
+          <li>Current website hosting access</li>
+          <li>Domain registrar or DNS access</li>
+          <li>Access to any website forms or email delivery systems</li>
+          <li>Access to the current website database or files, if available</li>
+        </ul>
+        <p>Administrator or collaborator access is preferred instead of sharing personal passwords whenever possible.</p>
+      </div>
+      <div class="access-card">
+        <h4>Google access</h4>
+        <ul>
+          <li>Google Business Profile access, if a profile already exists</li>
+          <li>Google Ads access, if an account already exists</li>
+          <li>Google Analytics access</li>
+          <li>Google Search Console access</li>
+          <li>Google Tag Manager access, if currently installed</li>
+          <li>Access to the Google account that will own the business profile and advertising account</li>
+        </ul>
+        <p>If these accounts don't currently exist, they can be created during setup. The business owner may need to complete certain Google verification steps directly, including video, phone, email or mailed verification.</p>
+      </div>
+      <div class="access-card">
+        <h4>Business information</h4>
+        <ul>
+          <li>Official business name</li>
+          <li>Business address</li>
+          <li>Main phone number</li>
+          <li>Primary email address</li>
+          <li>Business hours</li>
+          <li>Areas served</li>
+          <li>Roofing services offered</li>
+          <li>Priority services</li>
+          <li>Priority cities and neighbourhoods</li>
+          <li>Warranty information</li>
+          <li>Insurance information</li>
+          <li>Certifications and affiliations</li>
+          <li>Financing information, if offered</li>
+          <li>Emergency service availability</li>
+          <li>Preferred lead contact process</li>
+        </ul>
+      </div>
+      <div class="access-card">
+        <h4>Branding &amp; content</h4>
+        <ul>
+          <li>High-resolution logo files</li>
+          <li>Brand colours and fonts</li>
+          <li>Original photography</li>
+          <li>Completed roofing project photos</li>
+          <li>Before-and-after photos</li>
+          <li>Team photos</li>
+          <li>Vehicle and equipment photos</li>
+          <li>Customer testimonials</li>
+          <li>Existing marketing materials</li>
+          <li>Service descriptions</li>
+          <li>Company history</li>
+          <li>English and French content, if already available</li>
+        </ul>
+        <p>Original project photography is especially valuable for Google, potential customers and AI-powered search platforms.</p>
+      </div>
+      <div class="access-card">
+        <h4>Social media access</h4>
+        <p style="margin-top:0;">Where social media will be connected to the website or advertising campaigns, access may also be required for:</p>
+        <ul>
+          <li>Facebook</li>
+          <li>Instagram</li>
+          <li>Meta Business Manager</li>
+          <li>YouTube</li>
+          <li>LinkedIn</li>
+          <li>Any other active business profiles</li>
+        </ul>
+      </div>
+      <div class="access-card">
+        <h4>Advertising &amp; billing</h4>
+        <p style="margin-top:0;">A2 Roofing would be responsible for adding its own payment method directly to the Google Ads account. The advertising budget would be charged by Google and would not pass through SocialUp.</p>
+      </div>
+      <div class="access-card">
+        <h4>Lead management</h4>
+        <p style="margin-top:0;">Before launching campaigns, A2 Roofing should identify:</p>
+        <ul>
+          <li>Who receives new leads</li>
+          <li>Which phone number should be promoted</li>
+          <li>Which email address receives estimate requests</li>
+          <li>How quickly leads are normally contacted</li>
+          <li>Which services are most profitable</li>
+          <li>Which locations are preferred</li>
+          <li>Which jobs should not be advertised</li>
+          <li>How completed jobs and revenue will be recorded</li>
+        </ul>
+        <p>Tracking works best when leads can be followed from the initial phone call or form submission through to the final estimate and completed roofing project.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="next-steps">
+  <div class="wrap">
+    <div class="block-eyebrow">Getting started</div>
+    <h2>Recommended next steps</h2>
+    <ol class="steps-list">
+      <li>Confirm the services and geographic areas A2 Roofing wants to prioritize.</li>
+      <li>Confirm the website and monthly marketing budget.</li>
+      <li>Collect the required account access and business information.</li>
+      <li>Establish the website structure and page plan.</li>
+      <li>Build the English website and core conversion system.</li>
+      <li>Complete the French website version.</li>
+      <li>Set up the Google Business Profile, analytics and lead tracking.</li>
+      <li>Build the Google Ads campaigns and landing pages.</li>
+      <li>Launch the website and advertising campaigns.</li>
+      <li>Review lead quality, conversion data and search progress each month.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="cta" id="talk">
+  <div class="small-wrap">
+    <h2>Same brand. A system built to actually generate leads.</h2>
+    <p>Let's confirm scope and get the rebuild started.</p>
+    <div class="cta-buttons">
+      <a href="mailto:info@socialup.ca?subject=A2%20Roofing%20—%20Growth%20Plan%20Approval" class="btn btn-primary">Email SocialUp</a>
+      <a href="tel:+16138838766" class="btn btn-secondary">Call (613) 883-8766</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="https://socialup.ca" target="_blank" rel="noopener" class="brand-link">
+    <img src="socialup-logo.png" alt="SocialUp" class="footer-logo">
+  </a>
+  <div><a href="https://socialup.ca" target="_blank" rel="noopener" class="brand-link">Prepared by SocialUp for A2 Roofing · socialup.ca</a></div>
+</footer>
+
+</body>
+</html>
