@@ -68,7 +68,7 @@ a{color:var(--lime);}
 .tldr-card .kicker{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--lime);margin-bottom:18px;}
 .tldr-list{display:grid;gap:14px;margin:0;list-style:none;padding:0;}
 .tldr-list li{display:flex;gap:14px;align-items:flex-start;color:var(--grey);margin-bottom:0;font-size:15px;}
-.tldr-list .ico{flex:none;font-size:18px;line-height:1.4;}
+.tldr-list li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--lime);margin-top:8px;}
 .tldr-list b{color:#fff;}
 
 /* SCORE DASHBOARD */
@@ -183,13 +183,13 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 <section class="tldr" id="tldr">
   <div class="wrap">
     <div class="tldr-card">
-      <div class="kicker">⚡ The 30-second version</div>
+      <div class="kicker">The 30-second version</div>
       <ul class="tldr-list">
-        <li><span class="ico">🎨</span><span><b>The branding is genuinely good</b> — this isn't a redesign job, it's a plumbing job.</span></li>
-        <li><span class="ico">📉</span><span><b>Google barely knows you exist</b> for real searches like "roofing contractor Ottawa" — competitors like Roofmaster and Firon own that space.</span></li>
-        <li><span class="ico">🧩</span><span><b>One page is trying to do the work of eleven</b> — flat roofing, metal, TPO, EPDM and five cities are all crammed onto a single "Solutions" page.</span></li>
-        <li><span class="ico">🪪</span><span><b>Zero trust signals</b> — no reviews, no insurance info, no years-in-business, nothing a homeowner needs to say yes.</span></li>
-        <li><span class="ico">🛠️</span><span><b>The fix doesn't require a rebuild</b> — it's built in Webflow, so a 90-day SEO &amp; CRO push can turn this around.</span></li>
+        <li><span><b>The branding is genuinely good</b> — this isn't a redesign job, it's a plumbing job.</span></li>
+        <li><span><b>Google barely knows you exist</b> for real searches like "roofing contractor Ottawa" — competitors like Roofmaster and Firon own that space.</span></li>
+        <li><span><b>One page is trying to do the work of eleven</b> — flat roofing, metal, TPO, EPDM and five cities are all crammed onto a single "Solutions" page.</span></li>
+        <li><span><b>Zero trust signals</b> — no reviews, no insurance info, no years-in-business, nothing a homeowner needs to say yes.</span></li>
+        <li><span><b>The fix doesn't require a rebuild</b> — it's built in Webflow, so a 90-day SEO &amp; CRO push can turn this around.</span></li>
       </ul>
     </div>
   </div>
@@ -218,13 +218,12 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
     <div class="block-head"><div class="block-num">—</div><h2>The honest verdict</h2></div>
     <p class="lead">The website looks significantly better than it performs as a marketing asset.</p>
     <p>It has strong branding, modern visuals and a credible premium feel — but it's currently structured more like a six-page brochure than a website designed to generate roofing leads through Google. It's built in Webflow, which means most of what's below can be fixed without a rebuild.</p>
-    <div class="callout"><p><b style="color:#fff;">This is a strong potential client.</b> The visual foundation is already good. You don't need another expensive redesign — you need the existing site converted into a proper SEO and lead-generation system.</p></div>
   </div>
 </section>
 
 <section class="block">
   <div class="wrap">
-    <div class="block-head"><div class="block-num">—</div><h2>🔍 Current Google visibility</h2></div>
+    <div class="block-head"><div class="block-num">—</div><h2>Current Google visibility</h2></div>
     <h3 class="sub-h">Branded searches</h3>
     <p>Google can find the homepage and contact page when someone searches specifically for "A2 Roofing" or the domain. But the brand is presented inconsistently across the site:</p>
     <div class="chips">
@@ -256,7 +255,7 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 
 <section class="block" id="findings">
   <div class="wrap">
-    <div class="block-head"><div class="block-num">1</div><h2>🏗️ Website architecture</h2></div>
+    <div class="block-head"><div class="block-num">1</div><h2>Website architecture</h2></div>
     <h3 class="sub-h">Too few pages</h3>
     <p>The site currently has six public pages: Home, Solutions, FAQ, About, Contact, Privacy Policy. The homepage lists five cities and a dozen-plus services — but none of them has a properly optimized standalone page.</p>
     <p>One generic "Solutions" page is trying to rank for flat roofing, TPO, EPDM, elastomeric membrane, metal roofing, standing seam, steel shingles, asphalt shingles, inspections, emergency repair, residential, commercial — across five cities. Google needs a clear page per search intent; one page can't realistically compete for all of it.</p>
@@ -282,7 +281,7 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 
 <section class="block">
   <div class="wrap">
-    <div class="block-head"><div class="block-num">2</div><h2>🏷️ Page titles &amp; metadata</h2></div>
+    <div class="block-head"><div class="block-num">2</div><h2>Page titles &amp; metadata</h2></div>
     <p>Current titles are generic and inconsistent — switching between "A2" and "Asquare":</p>
     <div class="quote-block">"Home - A2 Roofing" · "Solutions - A2 Roofing" · "About - A2 Roofing" · "FAQ - Asquare Roofing" · "Contact - A2 Roofing"</div>
     <h3 class="sub-h">Better examples</h3>
@@ -298,7 +297,7 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 
 <section class="block">
   <div class="wrap">
-    <div class="block-head"><div class="block-num">3</div><h2>🧱 Heading structure</h2></div>
+    <div class="block-head"><div class="block-num">3</div><h2>Heading structure</h2></div>
     <p>The heading hierarchy is irregular — the homepage appears to use several H1-level headings instead of one clear primary H1, About and Contact use oversized blocks as H1s, and the Solutions page opens with generic secondary headings instead of a keyword-focused page heading.</p>
     <div class="callout">
       <p style="color:#fff;font-weight:600;margin-bottom:8px;">Better structure:</p>
@@ -314,7 +313,7 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 
 <section class="block">
   <div class="wrap">
-    <div class="block-head"><div class="block-num">4</div><h2>🐛 Website errors &amp; template residue</h2></div>
+    <div class="block-head"><div class="block-num">4</div><h2>Website errors &amp; template residue</h2></div>
     <p>Several issues make the site feel less finished once inspected closely:</p>
     <div class="proof-grid">
       <div class="proof-card">All 4 supplier logos use alt text "Arise Health logo" — leftover from another Webflow template</div>
@@ -329,7 +328,7 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 
 <section class="block">
   <div class="wrap">
-    <div class="block-head"><div class="block-num">5</div><h2>📍 Local SEO &amp; Google Business Profile</h2></div>
+    <div class="block-head"><div class="block-num">5</div><h2>Local SEO &amp; Google Business Profile</h2></div>
     <p class="lead">This may be the biggest immediate weakness.</p>
     <p>No prominent Google Business Profile could be verified for either "A2 Roofing" or "Asquare Roofing" in public brand searches — which could mean it doesn't exist, is under a different name, is new/weak, has inconsistent information, or simply isn't ranking. The site names Alexandre Langlois and an 819 number, while the Ottawa address only appears inside the privacy policy rather than on the Contact page or footer.</p>
 
@@ -341,7 +340,7 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 
 <section class="block">
   <div class="wrap">
-    <div class="block-head"><div class="block-num">6</div><h2>⭐ Reviews, trust &amp; credibility</h2></div>
+    <div class="block-head"><div class="block-num">6</div><h2>Reviews, trust &amp; credibility</h2></div>
     <p>The site makes broad claims about quality and craftsmanship but offers very little proof. None of the following are prominently shown:</p>
     <div class="chips">
       <span class="chip bad">Google review rating</span><span class="chip bad">Testimonials</span><span class="chip bad">Review count</span>
@@ -356,7 +355,7 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 
 <section class="block">
   <div class="wrap">
-    <div class="block-head"><div class="block-num">7</div><h2>💬 Conversion optimization</h2></div>
+    <div class="block-head"><div class="block-num">7</div><h2>Conversion optimization</h2></div>
     <p>The site is attractive, but the sales message is too vague.</p>
     <div class="cols2">
       <div>
@@ -387,7 +386,7 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 
 <section class="block">
   <div class="wrap">
-    <div class="block-head"><div class="block-num">8</div><h2>✍️ Content strategy</h2></div>
+    <div class="block-head"><div class="block-num">8</div><h2>Content strategy</h2></div>
     <p>There's no visible blog or educational resource section — leaving high-intent searches uncontested:</p>
     <div class="chips">
       <span class="chip">How much does a new roof cost in Ottawa?</span>
@@ -406,7 +405,7 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 
 <section class="block">
   <div class="wrap">
-    <div class="block-head"><div class="block-num">9</div><h2>⚙️ Technical SEO</h2></div>
+    <div class="block-head"><div class="block-num">9</div><h2>Technical SEO</h2></div>
     <div class="cols2">
       <div>
         <h3 class="sub-h" style="color:var(--lime);">Working in your favor</h3>
@@ -429,7 +428,7 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 
 <section class="block">
   <div class="wrap">
-    <div class="block-head"><div class="block-num">10</div><h2>🔑 Keyword strategy</h2></div>
+    <div class="block-head"><div class="block-num">10</div><h2>Keyword strategy</h2></div>
     <div class="cols2">
       <div>
         <h3 class="sub-h" style="color:var(--lime);">Best initial opportunities</h3>
@@ -459,7 +458,7 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 
 <section class="block" id="plan">
   <div class="wrap">
-    <div class="block-head"><div class="block-num">—</div><h2>🗓️ The 90-day plan</h2></div>
+    <div class="block-head"><div class="block-num">—</div><h2>The 90-day plan</h2></div>
     <div class="phase">
       <div class="days">Days 1–30<br>Foundation</div>
       <div>
@@ -508,7 +507,7 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 
 <section class="block">
   <div class="wrap">
-    <div class="block-head"><div class="block-num">—</div><h2>📈 Realistic ranking potential</h2></div>
+    <div class="block-head"><div class="block-num">—</div><h2>Realistic ranking potential</h2></div>
     <table class="tbl">
       <tr><th>Timeframe</th><th>What to expect</th></tr>
       <tr><td>30–60 days</td><td>Indexing improvements, cleaner branded presentation, first long-tail impressions</td></tr>
@@ -522,7 +521,7 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 
 <section class="block">
   <div class="wrap">
-    <div class="block-head"><div class="block-num">—</div><h2>🚀 Where we'd start</h2></div>
+    <div class="block-head"><div class="block-num">—</div><h2>Where we'd start</h2></div>
     <p class="lead">Your website looks excellent — but right now Google has very few pages or signals it can use to recommend you for actual roofing searches.</p>
     <p>You don't need to throw the website away. You need an SEO and lead-generation layer built onto the branding you've already invested in: a larger service-page architecture, local authority, reviews and ongoing project content — not just a title-tag cleanup.</p>
     <div class="callout">
