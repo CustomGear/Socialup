@@ -36,6 +36,8 @@ body{
 }
 h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:600;color:#fff;letter-spacing:-0.01em;}
 a{color:var(--lime);}
+.brand-link{text-decoration:none;color:inherit;display:inline-flex;align-items:center;transition:opacity .15s ease;}
+.brand-link:hover{opacity:0.75;}
 .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
 .small-wrap{max-width:760px;margin:0 auto;padding:0 24px;}
 
@@ -155,7 +157,9 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
     <img src="a2-logo.svg" alt="A2 Roofing" class="topbar-logo-a2">
     <div class="prepared-by">
       <span class="tag">Prepared by</span>
-      <img src="socialup-logo.png" alt="SocialUp" class="topbar-logo-su">
+      <a href="https://socialup.ca" target="_blank" rel="noopener" class="brand-link">
+        <img src="socialup-logo.png" alt="SocialUp" class="topbar-logo-su">
+      </a>
     </div>
   </div>
 </div>
@@ -167,7 +171,7 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
     <p class="sub">A full review of A2 Roofing's website architecture, on-page SEO, local search presence and lead-generation readiness — with a clear plan to fix it.</p>
     <div class="meta">
       <span>Prepared for <b>A2 Roofing</b></span>
-      <span>Prepared by <b>SocialUp</b></span>
+      <span>Prepared by <a href="https://socialup.ca" target="_blank" rel="noopener" class="brand-link"><b>SocialUp</b></a></span>
       <span>Reviewed <b>July 22, 2026</b></span>
     </div>
     <nav class="quicknav">
@@ -544,8 +548,10 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 </section>
 
 <footer>
-  <img src="socialup-logo.png" alt="SocialUp" class="footer-logo">
-  <div>Prepared by SocialUp for A2 Roofing · socialup.ca</div>
+  <a href="https://socialup.ca" target="_blank" rel="noopener" class="brand-link">
+    <img src="socialup-logo.png" alt="SocialUp" class="footer-logo">
+  </a>
+  <div><a href="https://socialup.ca" target="_blank" rel="noopener" class="brand-link">Prepared by SocialUp for A2 Roofing · socialup.ca</a></div>
 </footer>
 
 </body>
