@@ -59,6 +59,20 @@ a{color:var(--lime);}
 .hero .meta{display:flex;flex-wrap:wrap;gap:24px;margin-top:28px;font-size:13px;color:var(--grey-dim);}
 .hero .meta b{color:#fff;font-weight:600;}
 
+/* MINUTES CARD */
+.minutes-card{margin-top:30px;background:linear-gradient(155deg,var(--navy-card),var(--navy));border:1px solid var(--line);border-radius:16px;padding:26px 28px;}
+.minutes-title{font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--lime);margin-bottom:18px;}
+.minutes-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 28px;}
+@media (max-width:680px){.minutes-grid{grid-template-columns:1fr;}}
+.minutes-row{display:flex;align-items:flex-start;gap:12px;}
+.status-dot{flex:none;width:10px;height:10px;border-radius:50%;margin-top:6px;}
+.dot-ok{background:var(--lime);}
+.dot-todo{background:var(--grey-dim);}
+.dot-partial{background:var(--amber);}
+.dot-priority{background:var(--red-soft);}
+.status-label{display:block;font-size:14px;font-weight:700;color:#fff;}
+.status-note{display:block;font-size:13px;color:var(--grey-dim);margin-top:2px;}
+
 /* QUICK NAV */
 .quicknav{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
 .quicknav a{font-size:12.5px;font-weight:600;color:var(--grey-dim);background:var(--navy-card);border:1px solid var(--line);padding:7px 14px;border-radius:100px;text-decoration:none;transition:all .15s ease;}
@@ -127,10 +141,21 @@ li{margin-bottom:6px;}
 .wizard-step{display:none;animation:wizard-fade .25s ease;}
 .wizard-step.active{display:block;}
 @keyframes wizard-fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
-.wizard-title{font-family:'Fraunces',serif;font-weight:600;color:#fff;font-size:20px;margin-bottom:22px;}
+.wizard-title{font-family:'Fraunces',serif;font-weight:600;color:#fff;font-size:20px;margin-bottom:4px;}
+.wizard-subtitle{font-size:13.5px;color:var(--grey-dim);margin-bottom:24px;}
 .wizard-nav{display:flex;align-items:center;gap:14px;margin-top:8px;}
 .wizard-btn-back{background:transparent;border:1px solid var(--line);color:var(--grey-dim);padding:15px 26px;border-radius:100px;font-weight:700;font-size:14.5px;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s ease;visibility:hidden;}
 .wizard-btn-back:hover{color:#fff;border-color:rgba(255,255,255,0.3);}
+
+/* SUCCESS */
+.wizard-success{display:none;position:relative;text-align:center;padding:30px 0 10px;overflow:hidden;}
+.wizard-success.active{display:block;}
+.success-check{position:relative;z-index:1;width:56px;height:56px;margin:0 auto 18px;border-radius:50%;background:var(--lime-dim);border:1px solid rgba(196,255,71,0.4);color:var(--lime);font-size:26px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.success-title{position:relative;z-index:1;font-family:'Fraunces',serif;font-weight:600;color:#fff;font-size:22px;margin-bottom:8px;}
+.success-sub{position:relative;z-index:1;color:var(--grey-dim);font-size:14px;}
+.confetti-field{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+.confetti-piece{position:absolute;top:-10px;width:7px;height:7px;border-radius:1px;opacity:0.9;animation:confetti-fall 1.4s ease-in forwards;}
+@keyframes confetti-fall{to{transform:translateY(220px) rotate(220deg);opacity:0;}}
 
 /* STEPS */
 .steps-list{list-style:none;margin:0;padding:0;counter-reset:step;}
@@ -182,6 +207,36 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
       <a href="#gbp">Google Business Profile</a>
       <a href="#next">What's next</a>
     </nav>
+
+    <div class="minutes-card">
+      <div class="minutes-title">Where things stand right now</div>
+      <div class="minutes-grid">
+        <div class="minutes-row">
+          <span class="status-dot dot-ok"></span>
+          <div><span class="status-label">Timeline</span><span class="status-note">Targeting Spring launch</span></div>
+        </div>
+        <div class="minutes-row">
+          <span class="status-dot dot-todo"></span>
+          <div><span class="status-label">Domain access</span><span class="status-note">Needed — GoDaddy, handled on a call near launch</span></div>
+        </div>
+        <div class="minutes-row">
+          <span class="status-dot dot-todo"></span>
+          <div><span class="status-label">Email access</span><span class="status-note">Needed</span></div>
+        </div>
+        <div class="minutes-row">
+          <span class="status-dot dot-partial"></span>
+          <div><span class="status-label">Social media access</span><span class="status-note">Instagram is set up — Facebook/Meta still needed</span></div>
+        </div>
+        <div class="minutes-row">
+          <span class="status-dot dot-priority"></span>
+          <div><span class="status-label">Google Business Profile</span><span class="status-note">Doesn't exist yet — top priority</span></div>
+        </div>
+        <div class="minutes-row">
+          <span class="status-dot dot-priority"></span>
+          <div><span class="status-label">Reviews</span><span class="status-note">Start collecting as soon as possible</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -236,6 +291,7 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 
         <div class="wizard-step active">
           <p class="wizard-title">Let's start with the basics.</p>
+          <p class="wizard-subtitle">The important stuff first — nothing tricky here.</p>
           <div class="form-group">
             <label>What's the business called?</label>
             <input type="text" name="business_name" placeholder="A2 Roofing" required>
@@ -264,6 +320,7 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 
         <div class="wizard-step">
           <p class="wizard-title">Where do you work, and on what?</p>
+          <p class="wizard-subtitle">Mostly tapping boxes from here — barely any typing.</p>
           <div class="form-group">
             <label>Cities / areas you serve</label>
             <textarea name="areas_served" placeholder="Ottawa, Kanata, Nepean, Orleans, Barrhaven, Stittsville, Gatineau..."></textarea>
@@ -298,6 +355,7 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 
         <div class="wizard-step">
           <p class="wizard-title">What makes you trustworthy?</p>
+          <p class="wizard-subtitle">This is the bragging section. Have at it.</p>
           <div class="form-row">
             <div class="form-group">
               <label>How long have you been in business?</label>
@@ -327,7 +385,8 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
         </div>
 
         <div class="wizard-step">
-          <p class="wizard-title">Leads &amp; language.</p>
+          <p class="wizard-title">How should leads reach you?</p>
+          <p class="wizard-subtitle">Two questions and a dropdown. Almost there.</p>
           <div class="form-row">
             <div class="form-group">
               <label>Who should new leads go to?</label>
@@ -351,6 +410,7 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 
         <div class="wizard-step">
           <p class="wizard-title">Last few things.</p>
+          <p class="wizard-subtitle">Then you're done — we promise.</p>
           <div class="form-group">
             <label>Got photos, logo files or testimonials? <span class="hint">A link to a Google Drive or Dropbox folder is perfect — project photos especially help with Google and AI search</span></label>
             <input type="url" name="content_folder" placeholder="https://drive.google.com/...">
@@ -375,14 +435,20 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
           </div>
         </div>
 
-        <div class="wizard-nav">
+        <div class="wizard-nav" id="wizardNav">
           <button type="button" class="wizard-btn-back" id="backBtn">Back</button>
           <button type="button" class="submit-btn" id="nextBtn">Next</button>
           <button type="submit" class="submit-btn" id="submitBtn" style="display:none;">Submit</button>
         </div>
-        <div class="form-msg success" id="successMsg">Got it — thanks! We'll follow up shortly.</div>
         <div class="form-msg error" id="errorMsg">Something went wrong sending this. Mind trying again, or emailing it to info@socialup.ca?</div>
       </form>
+
+      <div class="wizard-success" id="successPanel">
+        <div class="confetti-field" id="confettiField"></div>
+        <div class="success-check">✓</div>
+        <p class="success-title">You're all set!</p>
+        <p class="success-sub">That's everything — we'll follow up shortly. Thanks for powering through it.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -476,14 +542,27 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
 
   render();
 
+  function fireConfetti(){
+    var field = document.getElementById('confettiField');
+    var colors = ['#c4ff47', '#ffffff', '#8ee62a'];
+    field.innerHTML = '';
+    for (var i = 0; i < 26; i++){
+      var piece = document.createElement('div');
+      piece.className = 'confetti-piece';
+      piece.style.left = (Math.random() * 100) + '%';
+      piece.style.background = colors[i % colors.length];
+      piece.style.animationDelay = (Math.random() * 0.3) + 's';
+      piece.style.transform = 'rotate(' + (Math.random() * 360) + 'deg)';
+      field.appendChild(piece);
+    }
+  }
+
   document.getElementById('onboardingForm').addEventListener('submit', function(e){
     e.preventDefault();
     if (!currentStepValid()) return;
     var form = e.target;
     var btn = submitBtn;
-    var successMsg = document.getElementById('successMsg');
     var errorMsg = document.getElementById('errorMsg');
-    successMsg.style.display = 'none';
     errorMsg.style.display = 'none';
     btn.disabled = true;
     btn.textContent = 'Sending...';
@@ -495,10 +574,9 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
       body: new URLSearchParams(data).toString()
     }).then(function(res){
       if (res.ok) {
-        form.reset();
-        current = 0;
-        render();
-        successMsg.style.display = 'block';
+        form.style.display = 'none';
+        document.getElementById('successPanel').classList.add('active');
+        fireConfetti();
         btn.textContent = 'Submit';
         btn.disabled = false;
       } else {
