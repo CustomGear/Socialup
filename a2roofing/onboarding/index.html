@@ -84,7 +84,6 @@ li{margin-bottom:6px;}
 .access-card h4{font-size:14.5px;color:var(--lime);font-family:'Inter',sans-serif;font-weight:700;margin-bottom:10px;letter-spacing:0.01em;}
 .access-card p{font-size:13.5px;margin-top:0;margin-bottom:10px;color:var(--grey);}
 .access-card .howto{font-size:12.5px;color:var(--grey-dim);margin-bottom:0;}
-.access-card .invite-email{display:inline-block;font-size:12.5px;font-weight:600;color:var(--lime);background:var(--navy);border:1px solid rgba(196,255,71,0.3);border-radius:6px;padding:4px 10px;margin-bottom:10px;font-family:monospace;}
 
 /* FORM */
 .form-section{background:var(--navy-card);border:1px solid var(--line);border-radius:18px;padding:36px;margin-top:8px;}
@@ -179,34 +178,31 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
   <div class="wrap">
     <div class="block-eyebrow">Step 1</div>
     <h2>Access &amp; accounts</h2>
-    <p>For each of these, add SocialUp as a collaborator through the platform's own "add user" tool — that way nothing ever gets typed into a form or texted over. If an account doesn't exist yet, skip it; we'll create it together.</p>
+    <p>The easiest way to handle this: give us your Google email and Instagram/Facebook handle in the form below, and <b style="color:#fff;">we'll send access requests from our end</b> — you just approve a notification. No settings menus to dig through, and no passwords change hands.</p>
     <div class="callout warn">
-      <p><b style="color:#fff;">Please don't send us passwords</b> by text, email or in the form below. Every account below has a proper way to add a collaborator without sharing your login. If one truly doesn't, use a password manager's secure share feature (1Password, Bitwarden, etc.) instead.</p>
+      <p><b style="color:#fff;">Please don't send us passwords</b> by text, email or in the form below. Everything here works through an approval request instead. The one exception is domain/hosting, which we'll only need briefly near launch.</p>
     </div>
 
     <div class="access-grid">
       <div class="access-card">
         <h4>Google Business Profile</h4>
-        <p>If one already exists for A2 Roofing or Asquare Roofing: Profile → Business Profile settings → People and access → Add.</p>
-        <span class="invite-email">info@socialup.ca</span>
-        <p class="howto">If it doesn't exist yet, no action needed here — we'll create it together in Step 3 below.</p>
+        <p>Give us the Google account email you'd use to manage the business in the form below. If a profile already exists, we'll send a request you approve with one tap. If it doesn't exist yet, we'll create it using that email.</p>
+        <p class="howto">Nothing to do on your end except fill in the email field.</p>
       </div>
       <div class="access-card">
         <h4>Google Ads, Analytics &amp; Search Console</h4>
-        <p>For each that exists: Admin/Settings → Account access → Add users, with "Manager" or "Editor" permission.</p>
-        <span class="invite-email">info@socialup.ca</span>
-        <p class="howto">If none of these exist yet, that's normal — we'll set them up as part of the rebuild.</p>
-      </div>
-      <div class="access-card">
-        <h4>Domain &amp; hosting</h4>
-        <p>We'll mainly need this near launch to point the domain at the new site — not urgent today. Just let us know your registrar (GoDaddy, Namecheap, etc.) and current host in the form below.</p>
-        <p class="howto">If you're able to add a collaborator on the registrar account now, even better — one less thing later.</p>
+        <p>These likely don't exist yet, so no action needed now — we'll set them up during the rebuild using the same Google email.</p>
+        <p class="howto">We'll add that email as a viewer once they're live, so you can always see your own numbers.</p>
       </div>
       <div class="access-card">
         <h4>Instagram &amp; Meta</h4>
-        <p>Meta Business Suite → Business settings → People → Add people, or add as an admin directly on the Instagram/Facebook page.</p>
-        <span class="invite-email">info@socialup.ca</span>
+        <p>Give us your Instagram handle and/or Facebook Page name in the form below. We'll send a Meta Business Suite access request — you'll get a notification to approve, one tap, no settings to find.</p>
         <p class="howto">Needed if we're connecting social content or running Meta ads later.</p>
+      </div>
+      <div class="access-card">
+        <h4>Domain &amp; hosting</h4>
+        <p>We'll mainly need this near launch to point the domain at the new site — not urgent today. Just let us know your registrar (GoDaddy, Namecheap, etc.) in the form below.</p>
+        <p class="howto">If it's easy to add a collaborator on the registrar account now, great — otherwise we'll walk through it together near launch.</p>
       </div>
     </div>
   </div>
@@ -336,18 +332,22 @@ footer .footer-logo{height:32px;opacity:0.9;margin-bottom:12px;}
         </div>
 
         <hr class="section-divider">
-        <div class="form-subhead">Content &amp; social</div>
+        <div class="form-subhead">Content, social &amp; access</div>
         <div class="form-group">
           <label>Link to a folder with photos, logo files &amp; testimonials <span class="hint">Google Drive, Dropbox, or similar — project photos are especially valuable for Google and AI search</span></label>
           <input type="url" name="content_folder" placeholder="https://drive.google.com/...">
         </div>
+        <div class="form-group">
+          <label>Google account email <span class="hint">The email you'd use to manage the business on Google — we'll use this to request Business Profile access (or create one) and add you as a viewer once Ads/Analytics are set up</span></label>
+          <input type="email" name="google_email" placeholder="you@gmail.com">
+        </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Instagram</label>
+            <label>Instagram handle <span class="hint">So we can send a Meta access request</span></label>
             <input type="text" name="instagram" placeholder="@a2roofing">
           </div>
           <div class="form-group">
-            <label>Facebook / LinkedIn / other</label>
+            <label>Facebook Page name / LinkedIn / other</label>
             <input type="text" name="other_social" placeholder="Links or handles">
           </div>
         </div>
