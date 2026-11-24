@@ -5,7 +5,7 @@ const clean = (v, n = 60) => String(v ?? '').replace(/[^\w .:/@-]/g, '').slice(0
 export default async (req, context) => {
   if (req.method !== 'POST') return new Response('', { status: 405 });
   const ua = req.headers.get('user-agent') || '';
-  if (BOT.test(ua)) return new Response('', { status: 204 });
+  if (BOT.test(ua)) return new Response(null, { status: 204 });
   let b = {}; try { b = JSON.parse(await req.text()); } catch {}
   const p = clean(b.p, 40); if (!p) return new Response('', { status: 400 });
   const ev = {
@@ -16,6 +16,6 @@ export default async (req, context) => {
     app: /instagram/i.test(ua) ? 'Instagram' : /fban|fbav/i.test(ua) ? 'Facebook' : '',
   };
   await getStore('proposal-opens').setJSON(`${p}/${Date.now()}-${Math.random().toString(36).slice(2, 8)}`, ev);
-  return new Response('', { status: 204 });
+  return new Response(null, { status: 204 });
 };
 export const config = { path: '/api/track' };
