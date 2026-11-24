@@ -352,5 +352,13 @@ a:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
 </div></section>
 <div class="wrap foot"><span>SocialUp · Not your average agency.</span><span>Wraptors OS · Proposal 2026</span></div>
 
+<script>
+(function(){var q=new URLSearchParams(location.search),r=q.get('r')||q.get('utm_source')||'direct',sid=Math.random().toString(36).slice(2,12),t0=Date.now(),max=0,pricing=false,sent=false;
+function send(type){var d=JSON.stringify({p:'wraptors',type:type,r:r,sid:sid,secs:Math.round((Date.now()-t0)/1000),scroll:max,pricing:pricing});try{navigator.sendBeacon?navigator.sendBeacon('/api/track',d):fetch('/api/track',{method:'POST',body:d,keepalive:true})}catch(e){}}
+addEventListener('scroll',function(){var h=document.documentElement,m=Math.round((h.scrollTop+innerHeight)/h.scrollHeight*100);if(m>max)max=Math.min(100,m)},{passive:true});
+var pr=document.getElementById('pricing');if(pr&&'IntersectionObserver'in window)new IntersectionObserver(function(e){if(e[0].isIntersecting)pricing=true},{threshold:.35}).observe(pr);
+send('open');document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')send('leave')});
+})();
+</script>
 </body>
 </html>
