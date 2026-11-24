@@ -112,7 +112,7 @@ section{position:relative;border-bottom:1px solid var(--rule)}
 @media(min-width:1000px){.cards{grid-template-columns:repeat(3,1fr)}}
 .card{background:var(--bg2);border:1px solid var(--rule);border-radius:12px;padding:26px 24px;display:grid;gap:10px;align-content:start;transition:border-color .2s}
 .card:hover{border-color:rgba(200,255,0,.35)}
-.card .ic{width:42px;height:42px;border-radius:10px;background:var(--lime-dim);color:var(--lime);display:grid;place-items:center}
+.card{position:relative}.chip{position:absolute;top:26px;right:22px;font-family:var(--head);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);border:1px solid rgba(200,255,0,.4);border-radius:999px;padding:3px 10px}.chip.wait{color:var(--muted);border-color:var(--rule)}.card h3{padding-right:0}.card .ic{width:42px;height:42px;border-radius:10px;background:var(--lime-dim);color:var(--lime);display:grid;place-items:center}
 .card h3{font-size:25px;font-weight:800;line-height:1}
 .card p{color:var(--muted);font-size:15.5px;line-height:1.5}
 
@@ -157,7 +157,7 @@ section{position:relative;border-bottom:1px solid var(--rule)}
 
 /* timeline */
 .tl{display:grid;gap:16px}
-@media(min-width:860px){.tl{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:640px){.tl{grid-template-columns:1fr 1fr}}@media(min-width:1000px){.tl{grid-template-columns:repeat(4,1fr)}}
 .ph{border-top:3px solid var(--rule);padding-top:22px;display:grid;gap:10px;align-content:start}
 .ph:first-child{border-color:var(--lime)}
 .ph small{font-family:var(--head);font-size:14px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--lime)}
@@ -212,7 +212,7 @@ a:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
     <div>
       <div class="for rise"><span>Prepared for</span><b>Wraptors</b><i></i><span>by SocialUp</span></div>
       <h1 class="rise d2">One system.<br>Every bay.<br><em>Every shop.</em></h1>
-      <p class="lede rise d3">Wraptors OS runs the shop floor, and it brings every client back. Jobs, bays, crew, cars, reviews and referrals live in one place, built around the Wraptors brand.</p>
+      <p class="lede rise d3">Wraptors OS runs the shop floor and helps bring every client back. Jobs, bays, crew, cars, reviews and referrals live in one place, built around the Wraptors brand.</p>
       <div class="meta">
         <div><small>Client</small><strong>Wraptors Dubai, Al Quoz</strong></div>
         <div><small>Date</small><strong>November 2026</strong></div>
@@ -226,7 +226,7 @@ a:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
 <section class="sec"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">The problem</span><h2>Great work.<br>Scattered system.</h2></div>
   <div class="pains">
-    <div class="pain"><span class="x">On the floor</span><h3>Whiteboards and group chats</h3><p>Who's in which bay, what's late and what's waiting on film all live in someone's head or in a WhatsApp thread.</p></div>
+    <div class="pain"><span class="x">On the floor</span><h3>Whiteboards and group chats</h3><p>In most shops, who's in which bay, what's late and what's waiting on film lives in someone's head or a WhatsApp thread.</p></div>
     <div class="pain"><span class="x">After pickup</span><h3>Clients go quiet</h3><p>A G-Wagon gets PPF, drives off, and nobody follows up for the 6-month check, the coating top-up or a review.</p></div>
     <div class="pain"><span class="x">Across shops</span><h3>No single view</h3><p>As Wraptors grows, every location runs its own way, and the owner can't see them side by side.</p></div>
   </div>
@@ -240,7 +240,7 @@ a:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
     <div class="feats">
       <div class="feat"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg><div><b>Job board and showroom</b><span>Every active car on the neon floor with its bay, stage, progress and due date.</span></div></div>
       <div class="feat"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="13" rx="2"/><path d="M8 21h8"/></svg><div><b>Shop TV</b><span>A live carousel, today's bays, the job flow and anything that needs attention, all on the wall.</span></div></div>
-      <div class="feat"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg><div><b>Crew phone view</b><span>Each person sees their jobs and ticks off their own tasks, with no training needed.</span></div></div>
+      <div class="feat"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg><div><b>Crew phone view</b><span>Each person sees their jobs and ticks off their own tasks. It takes minutes to learn.</span></div></div>
       <div class="feat"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M7 6h10M6 8l5 8M18 8l-5 8"/></svg><div><b>Wrap workflows</b><span>Colour change, printed, PPF, ceramic, tint and graphics, each with its own stages.</span></div></div>
       <div class="feat"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><div><b>Multi-location access</b><span>The owner sees every shop. Managers run theirs. Staff see their own work.</span></div></div>
       <div class="feat"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></svg><div><b>Scan to update</b><span>Staff scan the QR on the TV to pull up their jobs and update them from their phone.</span></div></div>
@@ -251,24 +251,24 @@ a:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
 </div></section>
 
 <section class="sec" id="growth"><div class="wrap">
-  <div class="sec-head"><span class="eyebrow">Phase 2 · Growth engine</span><h2>Every car becomes<br>a <span class="lime">repeat client.</span></h2><p class="lede">The system already knows every client, car and finish. Phase 2 puts that to work automatically.</p></div>
+  <div class="sec-head"><span class="eyebrow">Phase 2 · Growth engine</span><h2>Every car becomes<br>a <span class="lime">repeat client.</span></h2><p class="lede">Phase 2 rolls out in two steps. Most of it ships within 60 days. Anything that needs Meta or Google approval switches on as soon as they sign off, and we handle the applications for you.</p></div>
   <div class="loop">
     <div class="step"><small>Day 0</small><h3>Pickup</h3><p>Photos saved, client profile updated with the car, film and spend.</p></div>
-    <div class="step"><small>Day 1</small><h3>Review</h3><p>A WhatsApp asks for a Google review while the car still shines.</p></div>
+    <div class="step"><small>Day 1</small><h3>Review</h3><p>A message asks for a Google review while the car still shines.</p></div>
     <div class="step"><small>Day 2</small><h3>Refer</h3><p>A personal referral link, with rewards tracked automatically.</p></div>
     <div class="step"><small>Month 6</small><h3>Re-service</h3><p>A reminder for the PPF check or coating top-up, ready to book.</p></div>
     <div class="step"><small>Result</small><h3>Rebooked</h3><p>The client comes back and brings a friend. The loop starts again.</p></div>
   </div>
   <div class="cards">
-    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div><h3>VIP client profiles</h3><p>Every customer with their cars, job history, spend, photos and notes in one place.</p></div>
-    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg></div><h3>Re-service reminders</h3><p>Automatic messages at 6 months or any interval you choose, per service.</p></div>
-    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="18" height="12" rx="1.5"/><path d="M3 13h18M12 9v12M12 9c-2-4-6-4-6-1.5S9 9 12 9zm0 0c2-4 6-4 6-1.5S15 9 12 9z"/></svg></div><h3>Referral program</h3><p>Personal links for every client, with rewards and referral stats tracked automatically.</p></div>
-    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></div><h3>Review management</h3><p>Requests after pickup, and every Google review in one place to read and reply to.</p></div>
-    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></div><h3>WhatsApp, text and email</h3><p>Messages from each location's own number, and email from the Wraptors domain.</p></div>
-    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></div><h3>AI showroom covers</h3><p>Upload a few photos and the car is cut out and dropped on the showroom floor. Tweak it by chatting.</p></div>
-    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5M9 14h6M9 17h6"/></svg></div><h3>Design file storage</h3><p>Wrap artwork and every version saved on the job and client, with no more digging through drives.</p></div>
-    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></div><h3>Social auto-posting</h3><p>Finished cars go to Instagram, Facebook and Google, with approval first if you want it.</p></div>
-    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg></div><h3>Owner view</h3><p>Every location side by side: jobs, revenue, reviews and repeat clients.</p></div>
+    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div><span class="chip">Next 60 days</span><h3>VIP client profiles</h3><p>Every customer with their cars, job history, spend, photos and notes in one place.</p></div>
+    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg></div><span class="chip">Next 60 days</span><h3>Re-service reminders</h3><p>Automatic reminders at 6 months or any interval, per service. Email first, then WhatsApp once Meta approves.</p></div>
+    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="18" height="12" rx="1.5"/><path d="M3 13h18M12 9v12M12 9c-2-4-6-4-6-1.5S9 9 12 9zm0 0c2-4 6-4 6-1.5S15 9 12 9z"/></svg></div><span class="chip">Next 60 days</span><h3>Referral program</h3><p>Personal links for every client, with rewards and referral stats tracked automatically.</p></div>
+    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></div><span class="chip">Phased</span><h3>Review management</h3><p>Review requests after pickup start right away. Reading and replying to Google reviews in the dashboard follows Google's approval.</p></div>
+    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></div><span class="chip wait">After Meta / Google approval</span><h3>WhatsApp, text and email</h3><p>Email from the Wraptors domain first. WhatsApp and text from each location's own number once approved.</p></div>
+    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></div><span class="chip">Next 60 days</span><h3>AI showroom covers</h3><p>Upload a few photos and the car is cut out and placed on the showroom floor, using your real photo. Ask for tweaks by chatting.</p></div>
+    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5M9 14h6M9 17h6"/></svg></div><span class="chip">Next 60 days</span><h3>Design file storage</h3><p>Wrap artwork and every version saved on the job and client, with no more digging through drives.</p></div>
+    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></div><span class="chip wait">After Meta / Google approval</span><h3>Social auto-posting</h3><p>Finished cars go to Instagram, Facebook and Google, with approval first if you want it.</p></div>
+    <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg></div><span class="chip">Next 60 days</span><h3>Owner view</h3><p>Every location side by side: jobs, revenue, reviews and repeat clients.</p></div>
   </div>
 </div></section>
 
@@ -279,8 +279,8 @@ a:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
     <li><div><b>Workflows</b><span>Stages and task lists confirmed with each shop's team.</span></div></li>
     <li><div><b>Bays, hours and services</b><span>Set up per location, with pricing where you want it.</span></div></li>
     <li><div><b>Team accounts</b><span>Staff, roles and PINs created for everyone.</span></div></li>
-    <li><div><b>Client import</b><span>Existing clients and cars brought in from day one.</span></div></li>
-    <li><div><b>Accounts connected</b><span>WhatsApp or text numbers, email domain, Google Business and Meta.</span></div></li>
+    <li><div><b>Client import</b><span>Existing clients and cars brought in from a spreadsheet or your current system.</span></div></li>
+    <li><div><b>Accounts connected</b><span>Email domain connected, and the Meta and Google approvals started on day one.</span></div></li>
     <li><div><b>TV and training</b><span>TV set up in the shop and a training session with the team.</span></div></li>
     <li><div><b>30 days hands-on</b><span>Direct support after launch while the team settles in.</span></div></li>
   </ol>
@@ -298,7 +298,7 @@ a:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
       <div><h3>Every Wraptors shop</h3><p class="who">The full network on one platform, with the owner view across all locations.</p></div>
       <div class="nums"><div><small>Brand-wide setup</small><strong><sup>$</sup>12,500</strong><em>one time, up to 16 shops onboarded</em></div><div><small>Monthly, per shop</small><strong><sup>$</sup>375</strong><em>at 5+ locations</em></div></div>
       <div class="save"><span>Per shop</span><s>$450</s><b>$375 / month</b><span>16 shops ≈ $6,000 / month</span></div>
-      <ul class="ticks"><li>Up to 16 locations fully onboarded with the launch setup</li><li>Shared brand templates and workflows across the network</li><li>Owner view comparing every shop</li><li>Price locked for the 12-month term</li><li>Dubai's setup fee credited if you roll out within 6 months</li></ul>
+      <ul class="ticks"><li>Up to 16 locations fully onboarded with the launch setup</li><li>Shared brand templates and workflows across the network</li><li>Owner view comparing every shop (Phase 2)</li><li>Price locked for the 12-month term</li><li>Dubai's setup fee credited if you roll out within 6 months</li></ul>
     </div>
   </div>
   <div class="extras">
@@ -314,7 +314,8 @@ a:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
   <div class="tl">
     <div class="ph"><small>Week 1</small><h3>Set up</h3><p>First location configured, clients imported, accounts connected.</p></div>
     <div class="ph"><small>Week 2</small><h3>Go live</h3><p>Team trained, TV running in the shop, crew on their phones.</p></div>
-    <div class="ph"><small>Days 30–90</small><h3>Grow</h3><p>Phase 2 rolls out: profiles, reminders, referrals and reviews. Then the rest of the network, in waves.</p></div>
+    <div class="ph"><small>Days 30–60</small><h3>Grow</h3><p>Client profiles, re-service reminders, referrals, file storage, AI covers and the owner view. Other shops onboard in waves.</p></div>
+    <div class="ph"><small>When approved</small><h3>Connect</h3><p>WhatsApp, Google review replies and social posting switch on as Meta and Google approve. We handle the applications.</p></div>
   </div>
 </div></section>
 
